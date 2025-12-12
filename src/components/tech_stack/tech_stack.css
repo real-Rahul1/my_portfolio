@@ -1,0 +1,60 @@
+.tech_container{
+    height:30vh;
+    width:100%;
+    position: relative ;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    overflow:hidden;
+    perspective: 1000px;
+    
+}
+.wrapper{
+    transform-style: preserve-3d;
+    position:absolute;
+    height:100px;
+    width:100px;
+    animation: rotateY 12s linear infinite;
+    z-index:2;
+}
+.item{
+    position: absolute;
+    inset:0 0 0 0;
+}
+.item1{
+    transform:rotateY(0deg) translateZ(160px);
+}
+.item2{
+    transform:rotateY(72deg) translateZ(160px);
+}
+.item3{
+    transform:rotateY(144deg) translateZ(160px);
+}
+.item4{
+    transform:rotateY(216deg) translateZ(160px);
+}
+.item5{
+    transform:rotateY(288deg) translateZ(160px);
+}
+.item img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    border-radius:10px;
+    background: white;
+}
+.tech_name{
+    position:absolute;
+    z-index:1;
+    color:white;
+    font-size:2rem;
+    bottom:50px;
+    font-weight: bold;
+}
+@keyframes rotateY{
+    from{
+        transform:rotateX(-16deg) rotateY(360deg);
+    }to{
+        transform:rotateX(-16deg) rotateY(0deg);
+    }
+}

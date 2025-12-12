@@ -1,0 +1,9 @@
+
+.my_self{
+    -webkit-background-clip:text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    background:radial-gradient(circle at center,#45ff8b,#004714);
+    background-clip: text;
+    color:transparent;
+}

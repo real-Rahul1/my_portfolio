@@ -1,0 +1,68 @@
+.liquid-glass-btn {
+            /* Glass morphism base */
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            
+            /* Styling */
+            padding: 12px 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            font-family: 'Orbitron';
+            
+            /* Shadow */
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+            
+            /* Text shadow for better readability */
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Liquid flowing effect */
+        .liquid-glass-btn::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(
+                circle,
+                rgba(255, 255, 255, 0.4) 0%,
+                rgba(255, 255, 255, 0.1) 30%,
+                transparent 60%
+            );
+            animation: liquidFlow 8s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes liquidFlow {
+            0%, 100% {
+                transform: translate(-25%, -25%) ;
+            }
+            25% {
+                transform: translate(25%, -25%);
+            }
+            50% {
+                transform: translate(25%, 25%) ;
+            }
+            75% {
+                transform: translate(-25%, 25%) ;
+            }
+        }
+
+        /* Alternative darker glass button */
+        .liquid-glass-btn.dark {
+            background: rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        
