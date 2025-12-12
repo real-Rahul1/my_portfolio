@@ -59,6 +59,7 @@
     font-weight: bold;
     animation:autoView both;
     animation-timeline:view(70% 5%);
+    animation-range:entry 5% cover 30%;
 }
 .app_projects{
     display: flex;
@@ -78,6 +79,7 @@
     overflow:hidden;
     animation:autoView both;
     animation-timeline:view(70% 5%);
+    animation-range:entry 5% cover 30%;
 }
 .app_item_img img{
     width:100%;
