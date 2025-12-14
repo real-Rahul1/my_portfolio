@@ -1,19 +1,17 @@
 .tech_container{
-    height:30vh;
+    height:clamp(250px,33vw,500px);
     width:100%;
     position: relative ;
     display:flex;
     justify-content:center;
     align-items: center;
-    overflow:hidden;
     perspective: 1000px;
-    
 }
 .wrapper{
     transform-style: preserve-3d;
     position:absolute;
-    height:100px;
-    width:100px;
+    height:max(100px,10vw);
+    width:max(100px,10vw);
     animation: rotateY 12s linear infinite;
     z-index:2;
 }
@@ -22,19 +20,19 @@
     inset:0 0 0 0;
 }
 .item1{
-    transform:rotateY(0deg) translateZ(160px);
+    transform:rotateY(0deg) translateZ(clamp(160px,30vw,400px));
 }
 .item2{
-    transform:rotateY(72deg) translateZ(160px);
+    transform:rotateY(72deg) translateZ(clamp(160px,30vw,400px));
 }
 .item3{
-    transform:rotateY(144deg) translateZ(160px);
+    transform:rotateY(144deg) translateZ(clamp(160px,30vw,400px));
 }
 .item4{
-    transform:rotateY(216deg) translateZ(160px);
+    transform:rotateY(216deg) translateZ(clamp(160px,30vw,400px));
 }
 .item5{
-    transform:rotateY(288deg) translateZ(160px);
+    transform:rotateY(288deg) translateZ(clamp(160px,30vw,400px));
 }
 .item img{
     height:100%;
@@ -47,7 +45,7 @@
     position:absolute;
     z-index:1;
     color:white;
-    font-size:2rem;
+    font-size:clamp(32px,5vw,62px);
     bottom:50px;
     font-weight: bold;
 }

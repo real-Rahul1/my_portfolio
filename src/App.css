@@ -35,14 +35,14 @@
     align-items: center;
     text-align: center;
     gap:50px;
-    padding:3rem;
+    padding:clamp(24px,7vw,80px) clamp(24px,10vw,200px);
 }
 .my_image{
-    height:100px;
-    width:100px;
+    height:max(100px,14vw);
+    width:max(100px,14vw);
 }
 .my_self{
-    font-size:1.2rem;
+    font-size:clamp(20px,5vw,50px);
 }
 .hero_buttons{
     display:flex;
@@ -50,22 +50,23 @@
     justify-content: center;
 }
 .tech_stack{
-    padding:80px 0;
+    padding:clamp(80px,8vw,100px) 0;
 }
 .app_projects_title{
     text-align: center;
-    font-size: 2rem;
+    font-size:clamp(32px,5vw,62px);
     color:white;
     font-weight: bold;
     animation:autoView both;
     animation-timeline:view(70% 5%);
     animation-range:entry 5% cover 30%;
+    padding-top:clamp(40px,10vw,150px);
 }
 .app_projects{
     display: flex;
     flex-direction:column;
     gap:3rem;
-    padding:30px 0;
+    padding:clamp(30px,10vw,120px) 0;
 }
 .app_item{
     display: flex;
@@ -74,7 +75,7 @@
     gap:2rem;
 }
 .app_item_img{
-    width:300px;
+    width:clamp(300px,40vw,600px);
     border-radius:20px;
     overflow:hidden;
     animation:autoView both;
@@ -85,7 +86,7 @@
     width:100%;
 }
 .app_item_name a{
-    font-size:1.5rem;
+    font-size:clamp(24px,5vw,50px);
     color:#12c612;
 }
 @keyframes autoView{

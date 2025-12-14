@@ -4,12 +4,12 @@
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             
-            /* Styling */
-            padding: 12px 20px;
+            /* Responsive styling - all dimensions scale together */
+            padding: clamp(12px, 3vw, 24px) clamp(24px, 6vw, 48px);
             border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50px;
+            border-radius: clamp(30px, 15vw, 60px);
             color: white;
-            font-size: 18px;
+            font-size: clamp(16px, 4vw, 32px);
             font-weight: 600;
             cursor: pointer;
             position: relative;
@@ -17,13 +17,13 @@
             transition: all 0.3s ease;
             font-family: 'Orbitron';
             
-            /* Shadow */
+            /* Shadow - scales with button size */
             box-shadow: 
-                0 8px 32px rgba(0, 0, 0, 0.2),
+                0 clamp(8px, 4vw, 16px) clamp(24px, 12vw, 48px) rgba(0, 0, 0, 0.2),
                 inset 0 1px 0 rgba(255, 255, 255, 0.4);
             
             /* Text shadow for better readability */
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            text-shadow: 0 clamp(2px, 1vw, 4px) clamp(4px, 2vw, 8px) rgba(0, 0, 0, 0.2);
         }
 
         /* Liquid flowing effect */
@@ -64,5 +64,3 @@
             background: rgba(0, 0, 0, 0.3);
             border-color: rgba(255, 255, 255, 0.2);
         }
-
-        
